@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Project Request</title>
+
+  <style>
+    /* Navigation Bar Styles */
+    .navbar {
+      background-color: #ffffff;
+      padding: 10px 20px;
+      box-shadow: 0 2px 8px rgba(0, 0, 255, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .nav-logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #007BFF;
+      text-decoration: none;
+    }
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      margin: 0;
+      padding: 0;
+    }
+    .nav-links a {
+      text-decoration: none;
+      color: #007BFF;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    .nav-links a:hover {
+      color: #0056b3;
+    }
+
+    /* Page Content Styles */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f9f9f9;
+      padding: 0;
+      margin: 0;
+    }
+    .container {
+      max-width: 700px;
+      margin: 40px auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 0, 255, 0.1);
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #007BFF;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    label {
+      font-weight: bold;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ebebeb;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+    button {
+      padding: 15px;
+      background-color: #0699ee;
+      color: rgb(255, 255, 255);
+      font-size: 1rem;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    button:hover {
+      background-color: #1f9dd8;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="request.html" class="nav-logo">BOOM</a>
+      <ul class="nav-links">
+        <li><a href="request.html">Project Request</a></li>
+        <li><a href="test.html">HTML & CSS Test</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Page Content -->
+  <div class="container">
+    <h1>Request a Project</h1>
+
+    <form>
+      <div>
+        <label for="projectType">Project Type</label>
+        <select id="projectType" name="projectType" required>
+          <option value="">Select Project Type</option>
+          <option value="uiux">UI/UX Design</option>
+          <option value="frontend">Front-end Development</option>
+          <option value="backend">Back-end Development</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="projectName">Project Name</label>
+        <input type="text" id="projectName" name="projectName" placeholder="Enter your project name" required>
+      </div>
+
+      <div>
+        <label for="projectDesc">Project Description</label>
+        <textarea id="projectDesc" name="projectDesc" rows="5" placeholder="Describe your project..." required></textarea>
+      </div>
+
+      <button type="submit">Submit Request</button>
+    </form>
+  </div>
+
+</body>
+</html>
